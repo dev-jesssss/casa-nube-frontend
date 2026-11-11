@@ -8,8 +8,6 @@ export const brand = {
   category: 'Cafetería de especialidad',
   slogan: 'El placer de ir más despacio',
   concept: 'Un espacio para hacer una pausa.',
-  intro:
-    'Café de especialidad, repostería hecha en casa y un rincón tranquilo para detener el reloj un momento.',
   contact: {
     email: 'hola@casanube.co',
     phone: '+57 300 123 4567',

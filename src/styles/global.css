@@ -27,10 +27,29 @@ h2,
 h3,
 h4 {
   font-family: var(--font-heading);
-  font-weight: 600;
+  font-weight: 500;
   line-height: 1.15;
   letter-spacing: -0.01em;
   margin: 0 0 var(--space-3);
+}
+
+/* Palabra destacada en un título: <h2>Se trata de <em>cómo te hace sentir</em></h2> */
+h1 em,
+h2 em {
+  font-style: italic;
+  color: var(--color-primary);
+}
+
+/* Etiqueta pequeña sobre los títulos ("NUESTRA ESENCIA", "HORARIOS"...).
+   El texto se escribe normal en el JSX; las mayúsculas las pone el CSS. */
+.eyebrow {
+  margin: 0 0 var(--space-3);
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-primary-text);
 }
 
 p {

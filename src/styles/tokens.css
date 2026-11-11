@@ -14,12 +14,13 @@
   /* Roles (los componentes usan estos, no los de arriba) */
   --color-primary: var(--brand-terracotta);
   --color-primary-hover: #b05d40; /* terracota un tono más oscuro */
+  --color-primary-text: #9c4f35; /* terracota para texto pequeño: legible sobre crema */
   --color-primary-contrast: #ffffff;
   --color-secondary: var(--brand-sage);
   --color-accent: var(--brand-yellow);
 
   --color-bg: var(--brand-cream);
-  --color-bg-alt: #ede5d8; /* crema un tono más profundo para alternar secciones */
+  --color-bg-alt: #e9e1d5; /* crema un tono más profundo para alternar secciones */
   --color-surface: #fbf8f3;
   --color-text: var(--brand-coffee);
   --color-text-muted: #5e5148;
@@ -31,8 +32,8 @@
   --font-size-sm: 0.875rem;
   --font-size-md: 1rem;
   --font-size-lg: 1.25rem;
-  --font-size-xl: clamp(1.75rem, 3.5vw, 2.5rem);
-  --font-size-2xl: clamp(2.5rem, 6vw, 4.25rem);
+  --font-size-xl: clamp(2rem, 4vw, 3.25rem);
+  --font-size-2xl: clamp(2.75rem, 6vw, 5.25rem);
 
   /* Espaciado: amplio, como pide la dirección visual */
   --space-1: 0.25rem;

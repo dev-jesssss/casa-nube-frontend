@@ -7,12 +7,26 @@ import styles from './Photo.module.css';
  *
  * - `ratio`: proporción CSS, por ejemplo '4 / 5' o '16 / 9'
  * - `tone`: color del marcador: 'coffee' | 'terracotta' | 'sage' | 'yellow'
+ * - `priority`: true para la imagen principal visible al cargar (no se difiere su carga)
  */
-export default function Photo({ src, alt, ratio = '4 / 5', tone = 'coffee', className = '' }) {
+export default function Photo({
+  src,
+  alt,
+  ratio = '4 / 5',
+  tone = 'coffee',
+  priority = false,
+  className = '',
+}) {
   return (
     <figure className={`${styles.photo} ${className}`} style={{ aspectRatio: ratio }}>
       {src ? (
-        <img src={src} alt={alt} loading="lazy" className={styles.img} />
+        <img
+          src={src}
+          alt={alt}
+          className={styles.img}
+          loading={priority ? 'eager' : 'lazy'}
+          fetchPriority={priority ? 'high' : 'auto'}
+        />
       ) : (
         <div className={`${styles.placeholder} ${styles[tone]}`} role="img" aria-label={alt}>
           <span className={styles.label}>Foto: {alt}</span>

@@ -3,7 +3,7 @@ import styles from './Button.module.css';
 
 /**
  * Botón reutilizable.
- * - `variant`: 'primary' (terracota) | 'outline'
+ * - `variant`: 'primary' (terracota) | 'dark' (café oscuro) | 'outline' (píldora con borde)
  * - `size`: 'md' | 'small'
  * - Con `to` se renderiza como enlace interno (react-router).
  * - Con `href` se renderiza como enlace normal (anclas o externos).

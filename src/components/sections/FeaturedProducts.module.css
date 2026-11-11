@@ -1,20 +1,10 @@
+/* auto-fit reparte las tarjetas según el ancho: 4 columnas en escritorio,
+   2 en tablet y 1 en celular, sin media queries */
 .grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: var(--space-4);
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: var(--space-5) var(--space-4);
   margin: 0;
   padding: 0;
   list-style: none;
-}
-
-@media (max-width: 1024px) {
-  .grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 520px) {
-  .grid {
-    grid-template-columns: 1fr;
-  }
 }

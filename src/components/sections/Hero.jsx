@@ -1,35 +1,40 @@
 import Button from '@/components/ui/Button';
 import Photo from '@/components/ui/Photo';
-import { brand } from '@/config/brand';
 import styles from './Hero.module.css';
 
 export default function Hero() {
   return (
     <section id="inicio" className={styles.hero}>
       <div className={`container ${styles.grid}`}>
-        <div className={styles.content}>
-          <p className={styles.eyebrow}>{brand.category}</p>
+        <div>
+          <p className="eyebrow">Café · Calma · Momentos</p>
           <h1 className={styles.title}>
-            El placer de ir <em>más despacio</em>
+            Un espacio para hacer una <em>pausa.</em>
           </h1>
-          <p className={styles.intro}>{brand.intro}</p>
-          <div className={styles.actions}>
-            <Button href="#nuestro-cafe">Descubre nuestro café</Button>
-            <Button href="#menu" variant="outline">
-              Ver el menú
-            </Button>
-          </div>
+          <p className={styles.intro}>
+            Creemos en los pequeños momentos, en el aroma del café recién hecho y en el placer de ir
+            más despacio.
+          </p>
+          <Button href="#nuestro-cafe" variant="dark">
+            Descubre nuestro café <span aria-hidden="true">↗</span>
+          </Button>
         </div>
 
         <div className={styles.media}>
-          <Photo alt="taza de café de especialidad sobre mesa de madera" ratio="4 / 5" />
-          <span className={styles.badge} aria-hidden="true">
-            Tostado
-            <br />
-            artesanal
-          </span>
+          <Photo
+            src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?w=1200"
+            alt="Una taza de café en un ambiente acogedor"
+            ratio="5 / 4"
+            className={styles.arch}
+            priority
+          />
+          <p className={styles.note}>Un momento para ti.</p>
         </div>
       </div>
+
+      <span className={styles.decoration} aria-hidden="true">
+        CN.
+      </span>
     </section>
   );
 }

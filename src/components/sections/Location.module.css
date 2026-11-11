@@ -1,13 +1,3 @@
-/* Fondo verde salvia: el color secundario de la marca */
-.location {
-  background: var(--color-secondary);
-}
-
-/* El texto de la sección en café oscuro mantiene buen contraste sobre el salvia */
-.location :global(p) {
-  color: var(--color-text);
-}
-
 .grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -15,77 +5,29 @@
   gap: var(--space-7);
 }
 
-.card {
-  padding: var(--space-6);
-  background: var(--color-bg);
-  border-radius: var(--radius-md);
+.details {
+  display: grid;
+  gap: var(--space-4);
+  margin: 0 0 var(--space-5);
 }
 
-.block {
-  padding-bottom: var(--space-4);
-  margin-bottom: var(--space-4);
-  border-bottom: 1px solid var(--color-border);
+.details dt {
+  margin-bottom: var(--space-1);
 }
 
-.block p {
+.details dd {
   margin: 0;
-}
-
-.label {
-  margin-bottom: var(--space-2);
-  font-family: var(--font-body);
-  font-size: var(--font-size-sm);
-  font-weight: 700;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: var(--color-text-muted);
 }
 
 .hours {
   margin: 0;
-}
-
-.row {
-  display: flex;
-  justify-content: space-between;
-  gap: var(--space-3);
-  padding-block: var(--space-1);
-}
-
-.row dt {
-  font-weight: 500;
-}
-
-.row dd {
-  margin: 0;
-  text-align: right;
-  color: var(--color-text-muted);
-}
-
-.actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-3);
+  padding: 0;
+  list-style: none;
 }
 
 @media (max-width: 860px) {
   .grid {
     grid-template-columns: 1fr;
-    gap: var(--space-5);
-  }
-
-  .card {
-    padding: var(--space-4);
-  }
-}
-
-@media (max-width: 420px) {
-  .row {
-    flex-direction: column;
-    gap: 0;
-  }
-
-  .row dd {
-    text-align: left;
+    gap: var(--space-6);
   }
 }

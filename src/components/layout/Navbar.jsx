@@ -39,8 +39,8 @@ export default function Navbar() {
               </li>
             ))}
           </ul>
-          <Button href="/#ubicacion" size="small" onClick={close}>
-            Visítanos
+          <Button href="/#ubicacion" variant="outline" size="small" onClick={close}>
+            Visítanos <span aria-hidden="true">↗</span>
           </Button>
         </div>
       </nav>
