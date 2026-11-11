@@ -3,12 +3,23 @@ import styles from './Button.module.css';
 
 /**
  * Botón reutilizable.
+ * - `variant`: 'primary' (terracota) | 'outline'
+ * - `size`: 'md' | 'small'
  * - Con `to` se renderiza como enlace interno (react-router).
- * - Con `href` se renderiza como enlace externo.
+ * - Con `href` se renderiza como enlace normal (anclas o externos).
  * - Sin ninguno, es un <button>.
  */
-export default function Button({ variant = 'primary', to, href, className = '', ...props }) {
-  const classes = `${styles.button} ${styles[variant]} ${className}`.trim();
+export default function Button({
+  variant = 'primary',
+  size = 'md',
+  to,
+  href,
+  className = '',
+  ...props
+}) {
+  const classes = [styles.button, styles[variant], size === 'small' && styles.small, className]
+    .filter(Boolean)
+    .join(' ');
 
   if (to) return <Link to={to} className={classes} {...props} />;
   if (href) return <a href={href} className={classes} {...props} />;

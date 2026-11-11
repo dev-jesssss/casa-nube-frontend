@@ -1,0 +1,84 @@
+.hero {
+  padding-block: var(--space-6) var(--space-7);
+  scroll-margin-top: var(--header-height);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  align-items: center;
+  gap: var(--space-7);
+}
+
+.eyebrow {
+  margin-bottom: var(--space-4);
+  font-size: var(--font-size-sm);
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+.title {
+  font-size: var(--font-size-2xl);
+  font-weight: 600;
+  margin-bottom: var(--space-4);
+}
+
+.title em {
+  font-style: italic;
+  font-weight: 400;
+  color: var(--color-primary);
+}
+
+.intro {
+  max-width: 46ch;
+  font-size: 1.125rem;
+  color: var(--color-text-muted);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  margin-top: var(--space-5);
+}
+
+.media {
+  position: relative;
+}
+
+/* Sello decorativo en amarillo suave */
+.badge {
+  position: absolute;
+  left: calc(var(--space-5) * -1);
+  bottom: var(--space-6);
+  display: grid;
+  place-items: center;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  color: var(--color-text);
+  font-family: var(--font-heading);
+  font-style: italic;
+  line-height: 1.2;
+  text-align: center;
+}
+
+@media (max-width: 860px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+  }
+
+  .badge {
+    left: auto;
+    right: var(--space-3);
+    top: calc(var(--space-5) * -1);
+    bottom: auto;
+    width: 96px;
+    height: 96px;
+    font-size: var(--font-size-sm);
+  }
+}

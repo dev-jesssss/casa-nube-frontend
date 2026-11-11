@@ -1,48 +1,57 @@
 /*
- * Design tokens: la identidad visual del negocio.
+ * Design tokens de Casa Nube.
+ * Fuente: Brand Identity & Frontend Design Brief.
  * Para cambiar el estilo de toda la app, modifica estas variables.
  */
 :root {
-  /* Colores de marca */
-  --color-primary: #4f7cac;
-  --color-primary-hover: #3d6590;
-  --color-primary-contrast: #ffffff;
-  --color-accent: #f4b860;
+  /* Paleta de marca */
+  --brand-coffee: #2b211b; /* Café oscuro: textos principales */
+  --brand-cream: #f5f0e8; /* Crema: fondo principal */
+  --brand-terracotta: #c76d4d; /* Terracota: botones y acentos */
+  --brand-sage: #87917a; /* Verde salvia: elementos secundarios */
+  --brand-yellow: #e9c982; /* Amarillo suave: detalles decorativos */
 
-  /* Superficies y texto */
-  --color-bg: #f7f9fc;
-  --color-surface: #ffffff;
-  --color-text: #1f2a37;
-  --color-text-muted: #5b6776;
-  --color-border: #e2e8f0;
+  /* Roles (los componentes usan estos, no los de arriba) */
+  --color-primary: var(--brand-terracotta);
+  --color-primary-hover: #b05d40; /* terracota un tono más oscuro */
+  --color-primary-contrast: #ffffff;
+  --color-secondary: var(--brand-sage);
+  --color-accent: var(--brand-yellow);
+
+  --color-bg: var(--brand-cream);
+  --color-bg-alt: #ede5d8; /* crema un tono más profundo para alternar secciones */
+  --color-surface: #fbf8f3;
+  --color-text: var(--brand-coffee);
+  --color-text-muted: #5e5148;
+  --color-border: #e0d6c7;
 
   /* Tipografía */
-  --font-body: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
-  --font-heading: var(--font-body);
+  --font-heading: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  --font-body: 'DM Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
   --font-size-sm: 0.875rem;
   --font-size-md: 1rem;
   --font-size-lg: 1.25rem;
-  --font-size-xl: 2rem;
-  --font-size-2xl: clamp(2rem, 5vw, 3.25rem);
+  --font-size-xl: clamp(1.75rem, 3.5vw, 2.5rem);
+  --font-size-2xl: clamp(2.5rem, 6vw, 4.25rem);
 
-  /* Espaciado */
+  /* Espaciado: amplio, como pide la dirección visual */
   --space-1: 0.25rem;
   --space-2: 0.5rem;
   --space-3: 1rem;
   --space-4: 1.5rem;
   --space-5: 2rem;
   --space-6: 3rem;
-  --space-7: 5rem;
+  --space-7: clamp(4rem, 9vw, 7rem);
 
-  /* Forma y profundidad */
+  /* Forma y profundidad: bordes discretos, esquinas ligeramente redondeadas, sombras mínimas */
   --radius-sm: 6px;
-  --radius-md: 12px;
+  --radius-md: 10px;
   --radius-pill: 999px;
-  --shadow-sm: 0 1px 3px rgb(0 0 0 / 0.08);
-  --shadow-md: 0 8px 24px rgb(0 0 0 / 0.08);
+  --shadow-sm: 0 1px 2px rgb(43 33 27 / 0.06);
+  --shadow-md: 0 6px 18px rgb(43 33 27 / 0.08);
 
   /* Layout */
-  --container-width: 1120px;
-  --header-height: 64px;
-  --transition: 150ms ease;
+  --container-width: 1180px;
+  --header-height: 72px;
+  --transition: 180ms ease;
 }

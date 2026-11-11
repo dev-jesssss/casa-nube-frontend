@@ -1,6 +1,8 @@
 import { useState } from 'react';
-import { Link, NavLink } from 'react-router-dom';
-import { brand, navLinks } from '@/config/brand';
+import { Link } from 'react-router-dom';
+import { navLinks } from '@/config/brand';
+import Button from '@/components/ui/Button';
+import Logo from '@/components/ui/Logo';
 import styles from './Navbar.module.css';
 
 export default function Navbar() {
@@ -10,14 +12,13 @@ export default function Navbar() {
   return (
     <header className={styles.header}>
       <nav className={`container ${styles.nav}`} aria-label="Principal">
-        <Link to="/" className={styles.logo} onClick={close}>
-          <img src="/favicon.svg" alt="" width="32" height="32" />
-          <span>{brand.name}</span>
+        <Link to="/" className={styles.logoLink} onClick={close} aria-label="Casa Nube, inicio">
+          <Logo />
         </Link>
 
         <button
           type="button"
-          className={styles.toggle}
+          className={`${styles.toggle} ${isOpen ? styles.toggleOpen : ''}`}
           aria-expanded={isOpen}
           aria-controls="main-menu"
           aria-label={isOpen ? 'Cerrar menú' : 'Abrir menú'}
@@ -28,20 +29,20 @@ export default function Navbar() {
           <span className={styles.bar} />
         </button>
 
-        <ul id="main-menu" className={`${styles.menu} ${isOpen ? styles.open : ''}`}>
-          {navLinks.map(({ to, label }) => (
-            <li key={to}>
-              <NavLink
-                to={to}
-                end={to === '/'}
-                onClick={close}
-                className={({ isActive }) => `${styles.link} ${isActive ? styles.active : ''}`}
-              >
-                {label}
-              </NavLink>
-            </li>
-          ))}
-        </ul>
+        <div id="main-menu" className={`${styles.menu} ${isOpen ? styles.open : ''}`}>
+          <ul className={styles.links}>
+            {navLinks.map(({ href, label }) => (
+              <li key={href}>
+                <a href={href} className={styles.link} onClick={close}>
+                  {label}
+                </a>
+              </li>
+            ))}
+          </ul>
+          <Button href="/#ubicacion" size="small" onClick={close}>
+            Visítanos
+          </Button>
+        </div>
       </nav>
     </header>
   );
