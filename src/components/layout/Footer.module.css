@@ -1,0 +1,35 @@
+.footer {
+  background: var(--color-text);
+  color: var(--color-bg);
+  padding-top: var(--space-6);
+}
+
+.inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: var(--space-5);
+}
+
+.muted {
+  color: color-mix(in srgb, var(--color-bg) 70%, transparent);
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  font-style: normal;
+}
+
+.contact a {
+  color: inherit;
+}
+
+.copy {
+  margin: var(--space-5) auto 0;
+  padding-block: var(--space-3);
+  border-top: 1px solid color-mix(in srgb, var(--color-bg) 20%, transparent);
+  font-size: var(--font-size-sm);
+  color: color-mix(in srgb, var(--color-bg) 60%, transparent);
+}
